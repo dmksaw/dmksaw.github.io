@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>404</title>
-    <url>/404/</url>
-    <content><![CDATA[<p>对不起，您所访问的页面不存在或者已删除,<a href="https://resources.conisdaw.ml/">点击这里</a>返回首页</p>
-]]></content>
-  </entry>
-  <entry>
     <title>测试</title>
     <url>/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>这是一个测试</p>
