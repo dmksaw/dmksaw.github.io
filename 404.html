@@ -1,127 +1,99 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
+
 <head>
-    <meta charset="utf-8">
-    <title>404 - Not Found</title>
-    <link rel="icon" href="/images/favicon.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            outline: none;
-            font-family: \5FAE\8F6F\96C5\9ED1, 宋体;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -khtml-user-select: none;
-            user-select: none;
-            cursor: default;
-            font-weight: lighter;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エラー発生。</title>
+  <style>
+    @font-face {
+      font-family: 'JetBrains Mono';
+      src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+    }
 
-        .center {
-            margin: 0 auto;
-            color: #fff;
-            font-weight: bolder;
-            font-size: 72px;
-        }
+    html,
+    body {
+      height: 100%;
+    }
 
-        .whole {
-            width: 100%;
-            height: 100%;
-            line-height: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: -1000;
-            overflow: hidden;
-        }
+    body {
+      margin: 0;
+      color: #FFF;
+      background-color: #141516;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-image: url(https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg);
+    }
 
-        .whole img {
-            width: 100%;
-            height: 100%;
-        }
+    main {
+      text-align: center;
+    }
 
-        .mask {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #000;
-            opacity: 0.6;
-            filter: alpha(opacity=60);
-        }
+    #logo {
+      vertical-align: middle;
+      display: inline-block;
+    }
 
-        .b {
-            width: 100%;
-            text-align: center;
-            height: 400px;
-            position: absolute;
-            top: 50%;
-            margin-top: -230px
-        }
+    #logo img {
+      width: 300px;
+    }
 
-        .a {
-            width: 150px;
-            height: 50px;
-            margin-top: 30px
-        }
+    #error {
+      vertical-align: middle;
+      display: inline-block;
+    }
 
-        .a a {
-            display: block;
-            float: left;
-            width: 150px;
-            height: 50px;
-            background: #fff;
-            text-align: center;
-            line-height: 50px;
-            font-size: 18px;
-            border-radius: 25px;
-            color: #333
-        }
+    #error a {
+      color: #2BF;
+      padding: 3px 10px;
+      font-size: larger;
+      text-decoration: none;
+    }
 
-        .a a:hover {
-            color: #000;
-            box-shadow: #fff 0 0 20px
-        }
+    #error a:hover {
+      color: #000;
+      background-color: #2BF;
+    }
 
-        p {
-            color: #fff;
-            margin-top: 40px;
-            font-size: 24px;
-        }
+    h1 {
+      font-size: 60px;
+      color: #FE2;
+    }
 
-        #num {
-            margin: 0 5px;
-            font-weight: bold;
-        }
-    </style>
-    <script type="text/javascript">
-        var num = 5;
-        function redirect() {
-            num--;
-            document.getElementById("num").innerHTML = num;
-            if (num < 0) {
-                document.getElementById("num").innerHTML = 0;
-                location.href = "https://www.hojun.cn";
-            }
-        }
-        setInterval("redirect()", 1000);
-    </script>
+    h2 {
+      font-size: 32px;
+      font-family: "JetBrains Mono";
+    }
+
+    @media (max-width: 768px) {
+      #logo img {
+        width: auto;
+        height: 380px;
+        opacity: .23;
+        position: fixed;
+        bottom: -30px;
+        left: -38%;
+        pointer-events: none;
+      }      
+    }
+  </style>
 </head>
 
-<!-- <body onload="redirect();">
-<div class="whole">
-    <img src="https://wx4.sinaimg.cn/large/006bYVyvgy1ftan82duvvj30xc0p0mzb.jpg">
-    <div class="mask"></div>
-</div>
-<div class="b">
-    <h1 class="center">可能输错网址或此页面从未存在过</h1>
-    <p><br><br><br><br>
-        <span id="num"></span>秒后将继续探险...
-    </p>
-</div> -->
+<body>
+  <main>
+    <a id="logo" href="/">
+      <img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="to home" />
+    </a>
+    <div id="error">
+      <h1>エラー発生。</h1>
+      <h2 style="text-align: left;">404 NOT FOUND</h2>
+      <p style="text-align: left;">
+        <a href="/">首页</a>
+        <a onClick="history.back();">上一页</a>
+      </p>
+    </div>
+  </main>
+
 </body>
-<script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="https://www.hojun.cn/" homePageName="返回主页"></script>
+
 </html>
